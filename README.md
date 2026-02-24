@@ -53,4 +53,10 @@ Key Insights
 
 Different combinations of chunking and embeddings significantly affect both accuracy and environmental impact.
 
+Analysis:
+This thesis focused on designing and evaluating a Retrieval-Augmented Generation pipeline to study the impact of different chunking and embedding strategies on answer quality and efficiency.
+I built an end-to-end RAG pipeline on the CRAG QA dataset using LLaMA and OpenAI models, with three Hugging Face sentence transformer models and five chunking strategies. Embeddings were stored in FAISS, with cosine similarity used to retrieve candidate chunks, followed by reranking using OpenAI relevance scoring.
+Answer generation was performed using LLaMA, while OpenAI models were used to evaluate accuracy against ground truth. The best configuration achieved an F1 score of 0.82 while reducing estimated CO₂ emissions by 30 percent compared to the baseline dense retrieval approach.
+Technologies: LLaMA | OpenAI | GPT-3.5 | GPT-4 | FAISS | Sentence Transformers (MiniLM, IntFloat, GTE-Large)
+
 Evaluating carbon emission and computation cost alongside retrieval quality is critical for responsible AI.
